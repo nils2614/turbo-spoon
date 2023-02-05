@@ -2,6 +2,8 @@ ARG FEDORA_MAJOR_VERSION=37
 
 FROM quay.io/fedora-ostree-desktops/silverblue:${FEDORA_MAJOR_VERSION}
 
+COPY etc /etc
+
 RUN rm /etc/yum.repos.d/fedora-cisco-openh264.repo
 RUN wget https://raw.githubusercontent.com/ValveSoftware/steam-devices/master/60-steam-input.rules -O /etc/udev/rules.d/60-steam-input.rules
 
