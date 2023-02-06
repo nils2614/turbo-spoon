@@ -27,13 +27,17 @@ natural-scroll=false
 tap-to-click=true
 
 [org/gnome/desktop/wm/keybindings]
-switch-windows="['<Super>Tab']"
-switch-applications="[]"
-toggle-fullscreen="['<Shift><Super>f']"
+switch-windows=['<Super>Tab']
+switch-applications=[]
+toggle-fullscreen=['<Shift><Super>f']
 
 [org/gnome/settings-daemon/plugins/media-keys]
-mic-mute="['<Shift><Super>s']"
-search="['<Super>space']"
+mic-mute=['<Shift><Super>s']
+search=['<Super>space']
+
+[org/gnome/nautilus/icon-view]
+captions=['size', 'none', 'none']
+default-zoom-level='small-plus'
 
 [com/raggesilver/BlackBox]
 font='Fira Code 12'
