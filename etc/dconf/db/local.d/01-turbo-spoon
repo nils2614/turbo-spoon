@@ -40,7 +40,6 @@ toggle-fullscreen=['<Shift><Super>f']
 
 [org/gnome/settings-daemon/plugins/media-keys]
 mic-mute=['<Shift><Super>s']
-search=['<Super>space']
 
 [org/gnome/shell/window-switcher]
 current-workspace-only=false
