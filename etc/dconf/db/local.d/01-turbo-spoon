@@ -37,7 +37,7 @@ search="['<Super>space']"
 
 [com/raggesilver/BlackBox]
 font='Fira Code 12'
-opacity=90
+opacity='uint32 90'
 remember-window-size=true
 terminal-padding='(uint32 0, uint32 2, uint32 0, uint32 2)'
 window-show-borders=false
