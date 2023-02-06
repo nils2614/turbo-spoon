@@ -1,11 +1,11 @@
 [org/gnome/desktop/interface]
+clock-show-seconds=true
 color-scheme='prefer-dark'
 cursor-theme='Breeze_Snow'
-icon-theme='Papirus-Dark'
-font-name='Inter 11'
 document-font-name='Inter 11'
+font-name='Inter 11'
+icon-theme='Papirus-Dark'
 monospace-font-name='Fira Code 12'
-clock-show-seconds=true
 show-battery-percentage=true
 
 [org/gnome/desktop/wm/preferences]
@@ -34,7 +34,8 @@ tap-to-click=true
 
 [org/gnome/desktop/wm/keybindings]
 switch-windows=['<Super>Tab']
-switch-applications="[]"
+switch-applications=@as []
+switch-applications-backward=@as []
 toggle-fullscreen=['<Shift><Super>f']
 
 [org/gnome/settings-daemon/plugins/media-keys]
@@ -53,11 +54,11 @@ captions=['size', 'none', 'none']
 default-zoom-level='small-plus'
 
 [com/raggesilver/BlackBox]
-font='Fira Code 12'
-theme-dark='Tango'
-opacity=uint32 90
-terminal-padding=(uint32 1, uint32 2, uint32 1, uint32 2)
-remember-window-size=true
-window-show-borders=false
 fill-tabs=false
+font='Fira Code 12'
 headerbar-drag-area=true
+opacity=uint32 90
+remember-window-size=true
+terminal-padding=(uint32 1, uint32 2, uint32 1, uint32 2)
+theme-dark='Tango'
+window-show-borders=false
