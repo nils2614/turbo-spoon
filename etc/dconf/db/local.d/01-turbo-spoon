@@ -38,6 +38,8 @@ search="['<Super>space']"
 [com/raggesilver/BlackBox]
 font='Fira Code 12'
 opacity=uint32 90
+terminal-padding=(uint32 1, uint32 2, uint32 1, uint32 2)
 remember-window-size=true
-terminal-padding=(uint32 0, uint32 2, uint32 0, uint32 2)
 window-show-borders=false
+fill-tabs=false
+headerbar-drag-area=true
