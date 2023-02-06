@@ -15,6 +15,15 @@ titlebar-font='Inter Bold 11'
 [org/gnome/desktop/calendar]
 show-weekdate=true
 
+[org/gnome/desktop/notifications]
+show-in-lock-screen=false
+
+[org/gnome/desktop/privacy]
+old-files-age=uint32 30
+recent-files-max-age=7
+remove-old-temp-files=true
+remove-old-trash-files=true
+
 [org/gnome/shell/window-switcher]
 current-workspace-only=false
 
@@ -34,6 +43,10 @@ toggle-fullscreen=['<Shift><Super>f']
 [org/gnome/settings-daemon/plugins/media-keys]
 mic-mute=['<Shift><Super>s']
 search=['<Super>space']
+
+[org/gtk/gtk4/settings/file-chooser]
+show-hidden=false
+sort-directories-first=true
 
 [org/gnome/nautilus/icon-view]
 captions=['size', 'none', 'none']
