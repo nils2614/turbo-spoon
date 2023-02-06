@@ -24,9 +24,6 @@ recent-files-max-age=7
 remove-old-temp-files=true
 remove-old-trash-files=true
 
-[org/gnome/shell/window-switcher]
-current-workspace-only=false
-
 [org/gnome/desktop/peripherals/mouse]
 accel-profile='flat'
 speed=0.0
@@ -43,6 +40,9 @@ toggle-fullscreen=['<Shift><Super>f']
 [org/gnome/settings-daemon/plugins/media-keys]
 mic-mute=['<Shift><Super>s']
 search=['<Super>space']
+
+[org/gnome/shell/window-switcher]
+current-workspace-only=false
 
 [org/gtk/gtk4/settings/file-chooser]
 show-hidden=false
