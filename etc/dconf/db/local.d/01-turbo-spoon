@@ -52,6 +52,10 @@ sort-directories-first=true
 captions=['size', 'none', 'none']
 default-zoom-level='small-plus'
 
+[org/gnome/gnome-system-monitor]
+network-total-in-bits=false
+resources-memory-in-iec=true
+
 [com/raggesilver/BlackBox]
 fill-tabs=false
 font='Fira Code 12'
