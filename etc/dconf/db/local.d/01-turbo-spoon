@@ -3,4 +3,41 @@ color-scheme='prefer-dark'
 cursor-theme='Breeze_Snow'
 icon-theme='Papirus-Dark'
 font-name='Inter 11'
+document-font-name='Inter 11'
 monospace-font-name='Fira Code 12'
+clock-show-seconds=true
+show-battery-percentage=true
+
+[org/gnome/desktop/wm/preferences]
+button-layout='appmenu:minimize,close'
+titlebar-font='Inter Bold 11'
+
+[org/gnome/desktop/calendar]
+show-weekdate=true
+
+[org/gnome/shell/window-switcher]
+current-workspace-only=false
+
+[org/gnome/desktop/peripherals/mouse]
+accel-profile='flat'
+speed=0
+
+[org/gnome/desktop/peripherals/touchpad]
+natural-scroll=false
+tap-to-click=true
+
+[org/gnome/desktop/wm/keybindings]
+switch-windows="['<Super>Tab']"
+switch-applications="[]"
+toggle-fullscreen="['<Shift><Super>f']"
+
+[org/gnome/settings-daemon/plugins/media-keys]
+mic-mute="['<Shift><Super>s']"
+search="['<Super>space']"
+
+[com/raggesilver/BlackBox]
+font='Fira Code 12'
+opacity=90
+remember-window-size=true
+terminal-padding='(uint32 0, uint32 2, uint32 0, uint32 2)'
+window-show-borders=false
