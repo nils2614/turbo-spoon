@@ -20,7 +20,7 @@ current-workspace-only=false
 
 [org/gnome/desktop/peripherals/mouse]
 accel-profile='flat'
-speed=0
+speed=0.0
 
 [org/gnome/desktop/peripherals/touchpad]
 natural-scroll=false
@@ -37,7 +37,7 @@ search="['<Super>space']"
 
 [com/raggesilver/BlackBox]
 font='Fira Code 12'
-opacity='uint32 90'
+opacity=uint32 90
 remember-window-size=true
-terminal-padding='(uint32 0, uint32 2, uint32 0, uint32 2)'
+terminal-padding=(uint32 0, uint32 2, uint32 0, uint32 2)
 window-show-borders=false
