@@ -37,7 +37,7 @@ tap-to-click=true
 
 [org/gnome/desktop/wm/keybindings]
 switch-windows=['<Super>Tab']
-switch-applications=[]
+switch-applications="[]"
 toggle-fullscreen=['<Shift><Super>f']
 
 [org/gnome/settings-daemon/plugins/media-keys]
