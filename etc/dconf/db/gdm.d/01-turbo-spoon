@@ -1,10 +1,10 @@
 [org/gnome/desktop/interface]
+clock-show-seconds=true
 color-scheme='prefer-dark'
 cursor-theme='Breeze_Snow'
-icon-theme='Papirus-Dark'
 font-name='Inter 11'
+icon-theme='Papirus-Dark'
 monospace-font-name='Fira Code 12'
-clock-show-seconds=true
 show-battery-percentage=true
 
 [org/gnome/desktop/peripherals/mouse]
