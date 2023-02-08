@@ -13,6 +13,7 @@ RUN rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfra
 RUN rpm-ostree override remove firefox firefox-langpacks gnome-classic-session gnome-session-xsession gnome-software gnome-software-rpm-ostree gnome-terminal gnome-terminal-nautilus gnome-tour
 RUN rpm-ostree install blackbox-terminal breeze-cursor-theme dash fira-code-fonts htop papirus-icon-theme rsms-inter-fonts zsh
 
+RUN sed -i '1 i #!/usr/bin/bash' /etc/grub.d/10_linux && sed -i '2d' /etc/grub.d/10_linux
 RUN ln -sfT /usr/bin/dash /usr/bin/sh
 RUN systemctl enable dconf-update.service
 RUN rm -f /etc/yum.repos.d/calcastor-gnome-patched.repo
