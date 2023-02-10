@@ -1,6 +1,6 @@
 # Fedora image: turbo-spoon
 A custom image based on Fedora Silverblue, designed for my personal use case. \
-Feel free to give it a try though :)
+Feel free to give it a try though. :)
  
 To pull this image use:
  
