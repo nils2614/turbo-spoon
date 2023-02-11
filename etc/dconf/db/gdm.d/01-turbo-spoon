@@ -9,8 +9,12 @@ show-battery-percentage=true
 
 [org/gnome/desktop/peripherals/mouse]
 accel-profile='flat'
-speed=0
+natural-scroll=false
+speed=0.0
 
 [org/gnome/desktop/peripherals/touchpad]
+click-method='fingers'
+edge-scrolling-enabled=false
 natural-scroll=false
 tap-to-click=true
+two-finger-scrolling-enabled=true
