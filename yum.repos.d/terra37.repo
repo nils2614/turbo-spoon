@@ -1,0 +1,11 @@
+[terra]
+name=Terra 37
+baseurl=https://repos.fyralabs.com/terra37
+type=rpm
+skip_if_unavailable=True
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://repos.fyralabs.com/terra37/key.asc
+enabled=1
+enabled_metadata=1
+metadata_expire=4h
