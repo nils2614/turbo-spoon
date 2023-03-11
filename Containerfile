@@ -6,7 +6,7 @@ RUN wget https://raw.githubusercontent.com/ValveSoftware/steam-devices/master/60
 
 RUN rpm-ostree override remove firefox firefox-langpacks gnome-classic-session gnome-session-xsession gnome-terminal gnome-terminal-nautilus gnome-tour \
 gnome-shell-extension-apps-menu gnome-shell-extension-launch-new-instance gnome-shell-extension-places-menu gnome-shell-extension-window-list gnome-shell-extension-background-logo
-RUN rpm-ostree install blackbox-terminal breeze-cursor-theme dash fira-code-fonts htop papirus-icon-theme rsms-inter-fonts zsh
+RUN rpm-ostree install blackbox-terminal-0:0.13.2-1.fc37.x86_64 breeze-cursor-theme dash fira-code-fonts htop papirus-icon-theme rsms-inter-fonts zsh
 
 COPY etc /etc
 COPY usr /usr
