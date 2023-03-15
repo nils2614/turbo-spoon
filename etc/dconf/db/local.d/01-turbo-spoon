@@ -43,6 +43,7 @@ remove-old-temp-files=true
 remove-old-trash-files=true
 
 [org/gnome/desktop/wm/keybindings]
+close=['<Shift><Super>q']
 switch-applications=@as []
 switch-applications-backward=@as []
 switch-windows=['<Super>Tab']
