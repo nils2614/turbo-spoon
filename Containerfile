@@ -3,6 +3,7 @@ ARG FEDORA_MAJOR_VERSION=38
 FROM quay.io/fedora-ostree-desktops/silverblue:${FEDORA_MAJOR_VERSION}
 
 RUN wget https://raw.githubusercontent.com/ValveSoftware/steam-devices/master/60-steam-input.rules -O /etc/udev/rules.d/60-steam-input.rules
+RUN wget https://copr.fedorainfracloud.org/coprs/alternateved/blackbox-terminal/repo/fedora-38/blackbox-terminal-fedora-38.repo -O /etc/yum.repos.d/blackbox-terminal-copr.repo
 
 COPY etc /etc
 
@@ -15,7 +16,7 @@ COPY usr /usr
 RUN sed -i '1 i #!/usr/bin/bash' /etc/grub.d/10_linux && sed -i '2d' /etc/grub.d/10_linux
 RUN ln -sfT /usr/bin/dash /usr/bin/sh
 RUN systemctl enable dconf-update.service
-RUN rm -f /etc/yum.repos.d/terra37.repo
+RUN rm -f /etc/yum.repos.d/blackbox-terminal-copr.repo
 RUN rm -f /etc/yum.repos.d/fedora-cisco-openh264.repo
 
 RUN ostree container commit
