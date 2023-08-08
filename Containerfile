@@ -3,7 +3,7 @@ ARG FEDORA_MAJOR_VERSION=39
 FROM quay.io/fedora/fedora-silverblue:${FEDORA_MAJOR_VERSION}
 
 RUN wget https://raw.githubusercontent.com/ValveSoftware/steam-devices/master/60-steam-input.rules -O /etc/udev/rules.d/60-steam-input.rules
-RUN wget https://copr.fedorainfracloud.org/coprs/alternateved/blackbox-terminal/repo/fedora-38/blackbox-terminal-fedora-38.repo -O /etc/yum.repos.d/blackbox-terminal-copr.repo
+RUN wget https://copr.fedorainfracloud.org/coprs/alternateved/blackbox-terminal/repo/fedora-rawhide/blackbox-terminal-fedora-rawhide.repo -O /etc/yum.repos.d/blackbox-terminal-copr.repo
 
 COPY etc /etc
 
