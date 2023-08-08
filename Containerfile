@@ -3,12 +3,12 @@ ARG FEDORA_MAJOR_VERSION=39
 FROM quay.io/fedora/fedora-silverblue:${FEDORA_MAJOR_VERSION}
 
 RUN wget https://raw.githubusercontent.com/ValveSoftware/steam-devices/master/60-steam-input.rules -O /etc/udev/rules.d/60-steam-input.rules
-RUN wget https://copr.fedorainfracloud.org/coprs/alternateved/blackbox-terminal/repo/fedora-rawhide/blackbox-terminal-fedora-rawhide.repo -O /etc/yum.repos.d/blackbox-terminal-copr.repo
+RUN wget https://copr.fedorainfracloud.org/coprs/g/fedora-review/fedora-review-2224163-blackbox-terminal/repo/fedora-rawhide/group_fedora-review-fedora-review-2224163-blackbox-terminal-fedora-rawhide.repo -O /etc/yum.repos.d/blackbox-terminal-copr.repo
 
 COPY etc /etc
 
 RUN rpm-ostree override remove firefox firefox-langpacks gnome-classic-session gnome-session-xsession gnome-terminal gnome-terminal-nautilus gnome-tour \
-gnome-shell-extension-apps-menu gnome-shell-extension-launch-new-instance gnome-shell-extension-places-menu gnome-shell-extension-window-list gnome-shell-extension-background-logo vte291-0.73.93-1
+gnome-shell-extension-apps-menu gnome-shell-extension-launch-new-instance gnome-shell-extension-places-menu gnome-shell-extension-window-list gnome-shell-extension-background-logo
 RUN rpm-ostree install blackbox-terminal breeze-cursor-theme dash fira-code-fonts htop open-sans-fonts papirus-icon-theme rsms-inter-fonts zsh
 
 COPY usr /usr
