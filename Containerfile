@@ -8,7 +8,7 @@ RUN wget https://copr.fedorainfracloud.org/coprs/alternateved/blackbox-terminal/
 COPY etc /etc
 
 RUN rpm-ostree override remove firefox firefox-langpacks gnome-classic-session gnome-session-xsession gnome-terminal gnome-terminal-nautilus gnome-tour \
-gnome-shell-extension-apps-menu gnome-shell-extension-launch-new-instance gnome-shell-extension-places-menu gnome-shell-extension-window-list gnome-shell-extension-background-logo
+gnome-shell-extension-apps-menu gnome-shell-extension-launch-new-instance gnome-shell-extension-places-menu gnome-shell-extension-window-list gnome-shell-extension-background-logo vte291-0.73.93-1
 RUN rpm-ostree install blackbox-terminal breeze-cursor-theme dash fira-code-fonts htop open-sans-fonts papirus-icon-theme rsms-inter-fonts zsh
 
 COPY usr /usr
