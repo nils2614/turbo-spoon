@@ -17,5 +17,6 @@ RUN sed -i '1 i #!/usr/bin/bash' /etc/grub.d/10_linux && sed -i '2d' /etc/grub.d
 RUN ln -sfT /usr/bin/dash /usr/bin/sh
 RUN systemctl enable dconf-update.service
 RUN rm -f /etc/yum.repos.d/fedora-cisco-openh264.repo
+RUN rm -f /etc/yum.repos.d/dannycolin-mozillavpn-copr.repo
 
 RUN ostree container commit
