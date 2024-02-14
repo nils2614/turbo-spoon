@@ -1,7 +1,7 @@
 [org/gnome/desktop/interface]
 clock-show-seconds=true
 color-scheme='prefer-dark'
-cursor-theme='Breeze_Snow'
+cursor-theme='Breeze_Light'
 font-name='Inter 11'
 icon-theme='Papirus-Dark'
 monospace-font-name='Fira Code 12'
