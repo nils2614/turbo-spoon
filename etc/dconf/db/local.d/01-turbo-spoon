@@ -65,7 +65,7 @@ default-zoom-level='small-plus'
 mic-mute=['<Shift><Super>s']
 
 [org/gnome/shell]
-favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.Settings.desktop', 'com.raggesilver.BlackBox.desktop']
+favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.Settings.desktop', 'org.gnome.Software.desktop', 'com.raggesilver.BlackBox.desktop']
 
 [org/gnome/shell/window-switcher]
 current-workspace-only=false
