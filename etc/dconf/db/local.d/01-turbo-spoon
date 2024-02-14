@@ -14,7 +14,7 @@ show-weekdate=true
 [org/gnome/desktop/interface]
 clock-show-seconds=true
 color-scheme='prefer-dark'
-cursor-theme='Breeze_Snow'
+cursor-theme='Breeze_Light'
 document-font-name='Inter 11'
 font-name='Inter 11'
 icon-theme='Papirus-Dark'
