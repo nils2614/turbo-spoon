@@ -6,36 +6,41 @@
     ],
     "transports": {
         "docker": {
-	    "registry.access.redhat.com": [
-		{
-		    "type": "signedBy",
-		    "keyType": "GPGKeys",
-		    "keyPath": "/etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release"
-		}
-	    ],
-	    "registry.redhat.io": [
-		{
-		    "type": "signedBy",
-		    "keyType": "GPGKeys",
-		    "keyPath": "/etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release"
-		}
-	    ],
+            "registry.access.redhat.com": [
+                {
+                    "type": "signedBy",
+                    "keyType": "GPGKeys",
+                    "keyPath": "/etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release"
+                }
+            ],
+            "registry.redhat.io": [
+                {
+                    "type": "signedBy",
+                    "keyType": "GPGKeys",
+                    "keyPath": "/etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release"
+                }
+            ],
             "ghcr.io/nils2614/turbo-spoon": [
                 {
                     "type": "sigstoreSigned",
-                    "keyPath": "/usr/etc/pki/containers/turbo-spoon.pub",
+                    "keyPath": "/etc/pki/containers/turbo-spoon.pub",
                     "signedIdentity": {
                         "type": "matchRepository"
                     }
                 }
+            ],
+            "": [
+                {
+                    "type": "insecureAcceptAnything"
+                }
             ]
 	},
-        "docker-daemon": {
-	    "": [
-		{
-		    "type": "insecureAcceptAnything"
-		}
-	    ]
+	"docker-daemon": {
+            "": [
+                {
+                    "type": "insecureAcceptAnything"
+                }
+            ]
 	}
     }
 }
