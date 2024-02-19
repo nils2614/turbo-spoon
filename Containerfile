@@ -4,7 +4,7 @@ FROM quay.io/fedora/fedora-silverblue:${FEDORA_MAJOR_VERSION}
 
 RUN wget https://raw.githubusercontent.com/ValveSoftware/steam-devices/master/60-steam-input.rules -O /etc/udev/rules.d/60-steam-input.rules
 RUN wget https://repository.mullvad.net/rpm/stable/mullvad.repo -O /etc/yum.repos.d/mullvad.repo
-RUN ln -s /usr/lib/opt/mullvad-vpn '/opt/Mullvad VPN'
+RUN ln -sf /usr/lib/opt/mullvad-vpn '/opt/Mullvad VPN'
 
 COPY etc /etc
 
