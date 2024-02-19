@@ -3,7 +3,7 @@ ARG FEDORA_MAJOR_VERSION=39
 FROM quay.io/fedora/fedora-silverblue:${FEDORA_MAJOR_VERSION}
 
 RUN wget https://raw.githubusercontent.com/ValveSoftware/steam-devices/master/60-steam-input.rules -O /etc/udev/rules.d/60-steam-input.rules
-RUN WGET https://repository.mullvad.net/rpm/stable/mullvad.repo -O /etc/yum.repos.d/mullvad.repo
+RUN wget https://repository.mullvad.net/rpm/stable/mullvad.repo -O /etc/yum.repos.d/mullvad.repo
 
 COPY etc /etc
 
