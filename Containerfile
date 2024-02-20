@@ -26,6 +26,7 @@ COPY usr /usr
 
 RUN sed -i '1 i #!/usr/bin/bash' /etc/grub.d/10_linux && sed -i '2d' /etc/grub.d/10_linux
 RUN ln -sfT /usr/bin/dash /usr/bin/sh
+RUN mkdir -p /var/opt
 RUN ln -sf "/usr/lib/opt/Mullvad VPN" "/var/opt/Mullvad VPN"
 RUN systemctl enable dconf-update.service
 RUN rm -f /etc/yum.repos.d/fedora-cisco-openh264.repo
