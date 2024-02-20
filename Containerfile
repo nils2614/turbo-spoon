@@ -3,6 +3,7 @@ ARG FEDORA_MAJOR_VERSION=39
 FROM quay.io/fedora/fedora-silverblue:${FEDORA_MAJOR_VERSION}
 
 RUN wget https://raw.githubusercontent.com/ValveSoftware/steam-devices/master/60-steam-input.rules -O /etc/udev/rules.d/60-steam-input.rules
+RUN wget https://repository.mullvad.net/rpm/stable/mullvad.repo -O /etc/yum.repos.d/mullvad-fedora.repo
 
 RUN wget -c https://github.com/bikass/kora/archive/refs/tags/v1.6.0.zip
 RUN unzip -qo v1.6.0.zip 'kora-1.6.0/kora/*' 'kora-1.6.0/kora-light/*' 'kora-1.6.0/kora-light-panel/*' 'kora-1.6.0/kora-pgrey/*' -d .
@@ -17,7 +18,6 @@ COPY etc /etc
 RUN rpm-ostree override remove firefox firefox-langpacks gnome-classic-session gnome-session-xsession gnome-terminal gnome-terminal-nautilus gnome-tour \
 gnome-shell-extension-apps-menu gnome-shell-extension-launch-new-instance gnome-shell-extension-places-menu gnome-shell-extension-window-list gnome-shell-extension-background-logo
 RUN rpm-ostree install blackbox-terminal breeze-cursor-theme dash fira-code-fonts htop open-sans-fonts rsms-inter-fonts zsh
-RUN rpm-ostree install https://repo.protonvpn.com/fedora-${FEDORA_MAJOR_VERSION}-stable/protonvpn-stable-release/protonvpn-stable-release-1.0.1-2.noarch.rpm
 
 COPY usr /usr
 
