@@ -15,6 +15,8 @@ RUN rm -rf ./kora-1.6.0 ./v1.6.0.zip
 
 RUN mkdir -p /var/log/mullvad-vpn
 RUN touch /var/log/mullvad-vpn/daemon.log
+RUN mkdir -p /usr/lib/opt/mullvad-vpn
+RUN ln -s /usr/lib/opt/mullvad-vpn "/opt/Mullvad VPN"
 
 COPY etc /etc
 
