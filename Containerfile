@@ -5,7 +5,7 @@ FROM quay.io/fedora/fedora-silverblue:${FEDORA_MAJOR_VERSION}
 RUN wget https://raw.githubusercontent.com/ValveSoftware/steam-devices/master/60-steam-input.rules -O /etc/udev/rules.d/60-steam-input.rules
 
 RUN wget -c https://github.com/bikass/kora/archive/refs/tags/v1.6.0.zip
-RUN unzip -o v1.6.0.zip 'kora-1.6.0/kora/*' 'kora-1.6.0/kora-light/*' .
+RUN unzip -o v1.6.0.zip 'kora-1.6.0/kora/*' 'kora-1.6.0/kora-light/*' -d .
 RUN mv ./kora-1.6.0/kora /usr/share/icons/
 RUN mv ./kora-1.6.0/kora-light /usr/share/icons/
 RUN rm -rf ./kora-1.6.0 ./v1.6.0.zip
