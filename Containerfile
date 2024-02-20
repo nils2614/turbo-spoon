@@ -6,7 +6,7 @@ RUN wget https://raw.githubusercontent.com/ValveSoftware/steam-devices/master/60
 RUN wget https://repository.mullvad.net/rpm/stable/mullvad.repo -O /etc/yum.repos.d/mullvad-fedora.repo
 
 RUN wget -c https://github.com/bikass/kora/archive/refs/tags/v1.6.0.zip
-RUN unzip -qo v1.6.0.zip 'kora-1.6.0/kora/*' 'kora-1.6.0/kora-light/*' 'kora-1.6.0/kora-light-panel/*' 'kora-1.6.0/kora-pgrey/*' -d .
+RUN unzip -o -qq v1.6.0.zip 'kora-1.6.0/kora/*' 'kora-1.6.0/kora-light/*' 'kora-1.6.0/kora-light-panel/*' 'kora-1.6.0/kora-pgrey/*' -d .
 RUN mv ./kora-1.6.0/kora /usr/share/icons/
 RUN mv ./kora-1.6.0/kora-light /usr/share/icons/
 RUN mv ./kora-1.6.0/kora-light-panel /usr/share/icons/
@@ -14,7 +14,7 @@ RUN mv ./kora-1.6.0/kora-pgrey /usr/share/icons/
 RUN rm -rf ./kora-1.6.0 ./v1.6.0.zip
 
 RUN rm /opt
-RUN ln -sf /usr/lib/opt /opt
+RUN ln -sf usr/lib/opt /opt
 
 COPY etc /etc
 
@@ -30,8 +30,5 @@ RUN sed -i '1 i #!/usr/bin/bash' /etc/grub.d/10_linux && sed -i '2d' /etc/grub.d
 RUN ln -sfT /usr/bin/dash /usr/bin/sh
 RUN rm -f /etc/yum.repos.d/fedora-cisco-openh264.repo
 RUN rm -f /etc/yum.repos.d/mullvad-fedora.repo
-
-RUN rm /opt
-RUN ln -sf var/opt /opt
 
 RUN ostree container commit
