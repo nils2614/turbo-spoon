@@ -13,6 +13,8 @@ RUN mv ./kora-1.6.0/kora-light-panel /usr/share/icons/
 RUN mv ./kora-1.6.0/kora-pgrey /usr/share/icons/
 RUN rm -rf ./kora-1.6.0 ./v1.6.0.zip
 
+RUN mount --bind /usr/lib/opt /opt
+
 COPY etc /etc
 
 RUN rpm-ostree override remove firefox firefox-langpacks gnome-classic-session gnome-session-xsession gnome-terminal gnome-terminal-nautilus gnome-tour \
