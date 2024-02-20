@@ -20,7 +20,7 @@ COPY etc /etc
 
 RUN rpm-ostree override remove firefox firefox-langpacks gnome-classic-session gnome-session-xsession gnome-terminal gnome-terminal-nautilus gnome-tour \
 gnome-shell-extension-apps-menu gnome-shell-extension-launch-new-instance gnome-shell-extension-places-menu gnome-shell-extension-window-list gnome-shell-extension-background-logo
-RUN rpm-ostree install blackbox-terminal breeze-cursor-theme dash fira-code-fonts htop open-sans-fonts rsms-inter-fonts zsh
+RUN rpm-ostree install blackbox-terminal breeze-cursor-theme dash fira-code-fonts htop mullvad-vpn open-sans-fonts rsms-inter-fonts zsh
 
 COPY usr /usr
 
@@ -28,5 +28,6 @@ RUN sed -i '1 i #!/usr/bin/bash' /etc/grub.d/10_linux && sed -i '2d' /etc/grub.d
 RUN ln -sfT /usr/bin/dash /usr/bin/sh
 RUN systemctl enable dconf-update.service
 RUN rm -f /etc/yum.repos.d/fedora-cisco-openh264.repo
+RUN rm -f /etc/yum.repos.d/mullvad-fedora.repo
 
 RUN ostree container commit
