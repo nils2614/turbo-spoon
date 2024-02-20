@@ -51,7 +51,6 @@ toggle-fullscreen=['<Shift><Super>f']
 
 [org/gnome/desktop/wm/preferences]
 button-layout='appmenu:minimize,close'
-focus-new-windows='strict'
 titlebar-font='Inter Bold 11'
 
 [org/gnome/gnome-system-monitor]
