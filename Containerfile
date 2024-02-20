@@ -30,4 +30,7 @@ RUN systemctl enable dconf-update.service
 RUN rm -f /etc/yum.repos.d/fedora-cisco-openh264.repo
 RUN rm -f /etc/yum.repos.d/mullvad-fedora.repo
 
+RUN rm /opt
+RUN ln -sf var/opt /opt
+
 RUN ostree container commit
