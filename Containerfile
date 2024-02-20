@@ -13,8 +13,8 @@ RUN mv ./kora-1.6.0/kora-light-panel /usr/share/icons/
 RUN mv ./kora-1.6.0/kora-pgrey /usr/share/icons/
 RUN rm -rf ./kora-1.6.0 ./v1.6.0.zip
 
-RUN mkdir -p /var/opt
-RUN mount --bind /usr/lib/opt /var/opt
+RUN rm /opt
+RUN ln -sf /usr/lib/opt /opt
 
 COPY etc /etc
 
