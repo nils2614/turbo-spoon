@@ -3,7 +3,7 @@ clock-show-seconds=true
 color-scheme='prefer-dark'
 cursor-theme='Breeze_Light'
 font-name='Inter 11'
-icon-theme='Papirus-Dark'
+icon-theme='kora'
 monospace-font-name='Fira Code 12'
 show-battery-percentage=true
 
