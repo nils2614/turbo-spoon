@@ -32,8 +32,6 @@ RUN rm -f /etc/yum.repos.d/fedora-cisco-openh264.repo
 RUN rm -f /etc/yum.repos.d/mullvad-fedora.repo
 
 RUN rm /opt
-RUN mkdir -p /var/opt
 RUN ln -sf var/opt /opt
-RUN ln -sf "/usr/lib/opt/Mullvad VPN" "/var/opt/Mullvad VPN"
 
 RUN ostree container commit
