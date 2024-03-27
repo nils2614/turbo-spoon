@@ -18,7 +18,7 @@ RUN ln -sf usr/lib/opt /opt
 
 COPY etc /etc
 
-RUN rpm-ostree override remove firefox firefox-langpacks gnome-terminal gnome-terminal-nautilus gnome-tour
+RUN rpm-ostree override remove firefox firefox-langpacks gnome-classic-session-xsession gnome-session-xsession gnome-terminal gnome-terminal-nautilus gnome-tour
 RUN rpm-ostree install blackbox-terminal breeze-cursor-theme dash fira-code-fonts htop open-sans-fonts rsms-inter-fonts tailscale zsh
 
 COPY usr /usr
