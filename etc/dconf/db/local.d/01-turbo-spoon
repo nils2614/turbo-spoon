@@ -15,8 +15,8 @@ show-weekdate=true
 clock-show-seconds=true
 color-scheme='prefer-dark'
 cursor-theme='Breeze_Light'
-document-font-name='Inter 11'
-font-name='Inter 11'
+document-font-name='Inter 12'
+font-name='Inter 12'
 icon-theme='kora'
 monospace-font-name='Fira Code 12'
 show-battery-percentage=true
@@ -51,7 +51,7 @@ toggle-fullscreen=['<Shift><Super>f']
 
 [org/gnome/desktop/wm/preferences]
 button-layout='appmenu:minimize,close'
-titlebar-font='Inter Bold 11'
+titlebar-font='Inter Bold 12'
 
 [org/gnome/gnome-system-monitor]
 network-total-in-bits=false
