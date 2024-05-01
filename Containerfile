@@ -18,8 +18,9 @@ RUN ln -sf usr/lib/opt /opt
 
 COPY etc /etc
 
-RUN rpm-ostree override remove firefox firefox-langpacks gnome-classic-session gnome-classic-session-xsession gnome-session-xsession gnome-terminal gnome-terminal-nautilus gnome-tour \
-gnome-shell-extension-apps-menu gnome-shell-extension-launch-new-instance gnome-shell-extension-places-menu gnome-shell-extension-window-list gnome-shell-extension-background-logo nano
+RUN rpm-ostree override remove firefox firefox-langpacks nano-default-editor nano \
+gnome-classic-session gnome-classic-session-xsession gnome-session-xsession gnome-terminal gnome-terminal-nautilus gnome-tour \
+gnome-shell-extension-apps-menu gnome-shell-extension-launch-new-instance gnome-shell-extension-places-menu gnome-shell-extension-window-list gnome-shell-extension-background-logo
 RUN rpm-ostree install blackbox-terminal breeze-cursor-theme dash fira-code-fonts htop micro open-sans-fonts rsms-inter-fonts tailscale zsh
 
 COPY usr /usr
