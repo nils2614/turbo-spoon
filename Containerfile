@@ -18,10 +18,12 @@ RUN ln -sf usr/lib/opt /opt
 
 COPY etc /etc
 
-RUN rpm-ostree override remove firefox firefox-langpacks nano-default-editor nano \
+RUN rpm-ostree override remove firefox firefox-langpacks \
 gnome-classic-session gnome-tour gnome-shell-extension-apps-menu gnome-shell-extension-launch-new-instance \
 gnome-shell-extension-places-menu gnome-shell-extension-window-list gnome-shell-extension-background-logo
-RUN rpm-ostree install breeze-cursor-theme cosmic-term dash fira-code-fonts htop micro open-sans-fonts rsms-inter-fonts tailscale zsh wireshark
+RUN rpm-ostree install breeze-cursor-theme cosmic-term dash fira-code-fonts htop open-sans-fonts rsms-inter-fonts tailscale zsh wireshark
+
+RUN setcap cap_net_raw,cap_net_admin+eip /usr/bin/dumpcap
 
 COPY usr /usr
 
