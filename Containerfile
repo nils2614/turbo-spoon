@@ -21,7 +21,7 @@ COPY etc /etc
 RUN rpm-ostree override remove firefox firefox-langpacks nano-default-editor nano \
 gnome-classic-session gnome-tour gnome-shell-extension-apps-menu gnome-shell-extension-launch-new-instance \
 gnome-shell-extension-places-menu gnome-shell-extension-window-list gnome-shell-extension-background-logo
-RUN rpm-ostree install blackbox-terminal breeze-cursor-theme dash fira-code-fonts htop micro open-sans-fonts rsms-inter-fonts tailscale zsh wireshark
+RUN rpm-ostree install breeze-cursor-theme cosmic-term dash fira-code-fonts htop micro open-sans-fonts rsms-inter-fonts tailscale zsh wireshark
 
 COPY usr /usr
 
