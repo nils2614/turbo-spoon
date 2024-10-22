@@ -22,8 +22,8 @@ RUN rpm-ostree override remove firefox firefox-langpacks ptyxis gnome-tour \
 gnome-classic-session gnome-shell-extension-apps-menu gnome-shell-extension-launch-new-instance \
 gnome-shell-extension-places-menu gnome-shell-extension-window-list gnome-shell-extension-background-logo
 RUN rpm-ostree install breeze-cursor-theme dash fira-code-fonts htop open-sans-fonts rsms-inter-fonts tailscale zsh wireshark \
-cosmic-bg cosmic-comp cosmic-desktop cosmic-files cosmic-notifications cosmic-panel cosmic-randr cosmic-session \
-cosmic-settings cosmic-settings-daemon cosmic-term cosmic-workspaces xdg-desktop-portal-cosmic
+cosmic-applets cosmic-bg cosmic-comp cosmic-edit cosmic-files cosmic-launcher cosmic-notifications cosmic-panel cosmic-randr \
+cosmic-screenshot cosmic-session cosmic-settings cosmic-settings-daemon cosmic-term cosmic-workspaces xdg-desktop-portal-cosmic
 
 COPY usr /usr
 
