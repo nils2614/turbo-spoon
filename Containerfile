@@ -28,12 +28,12 @@ cosmic-panel cosmic-randr cosmic-screenshot cosmic-session cosmic-settings cosmi
 
 COPY usr /usr
 
-RUN systemctl disable gdm.service
+# RUN systemctl disable gdm.service
 RUN systemctl enable dconf-update.service
-RUN systemctl enable cosmic-greeter.service
+# RUN systemctl enable cosmic-greeter.service
 RUN systemctl enable tailscaled.service
-# RUN sed -i '1 i #!/usr/bin/bash' /etc/grub.d/10_linux && sed -i '2d' /etc/grub.d/10_linux
-# RUN ln -sfT /usr/bin/dash /usr/bin/sh
+RUN sed -i '1 i #!/usr/bin/bash' /etc/grub.d/10_linux && sed -i '2d' /etc/grub.d/10_linux
+RUN ln -sfT /usr/bin/dash /usr/bin/sh
 RUN rm -f /etc/yum.repos.d/fedora-cisco-openh264.repo
 RUN rm -f /etc/yum.repos.d/tailscale-fedora.repo
 
