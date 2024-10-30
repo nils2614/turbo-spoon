@@ -18,7 +18,7 @@ RUN ln -sf usr/lib/opt /opt
 
 COPY etc /etc
 
-RUN rpm-ostree override remove firefox firefox-langpacks ptyxis gdm gnome-software gnome-software-rpm-ostree gnome-tour \
+RUN rpm-ostree override remove firefox firefox-langpacks ptyxis gnome-software gnome-software-rpm-ostree gnome-tour \
 gnome-classic-session gnome-shell-extension-apps-menu gnome-shell-extension-launch-new-instance \
 gnome-shell-extension-places-menu gnome-shell-extension-window-list gnome-shell-extension-background-logo
 
@@ -28,7 +28,9 @@ cosmic-panel cosmic-randr cosmic-screenshot cosmic-session cosmic-settings cosmi
 
 COPY usr /usr
 
-# RUN systemctl enable dconf-update.service
+RUN systemctl disable gdm.service
+RUN systemctl enable dconf-update.service
+RUN systemctl enable cosmic-greeter.service
 RUN systemctl enable tailscaled.service
 # RUN sed -i '1 i #!/usr/bin/bash' /etc/grub.d/10_linux && sed -i '2d' /etc/grub.d/10_linux
 # RUN ln -sfT /usr/bin/dash /usr/bin/sh
