@@ -24,7 +24,7 @@ gnome-shell-extension-places-menu gnome-shell-extension-window-list gnome-shell-
 
 RUN rpm-ostree install breeze-cursor-theme dash fira-code-fonts htop open-sans-fonts rsms-inter-fonts tailscale zsh wireshark \
 cosmic-app-library cosmic-applets cosmic-bg cosmic-comp cosmic-edit cosmic-files cosmic-greeter cosmic-icon-theme cosmic-idle cosmic-launcher cosmic-notifications \
-cosmic-osd cosmic-panel cosmic-randr cosmic-screenshot cosmic-session cosmic-settings cosmic-settings-daemon cosmic-term cosmic-workspaces xdg-desktop-portal-cosmic
+cosmic-osd cosmic-panel cosmic-randr cosmic-screenshot cosmic-session cosmic-settings cosmic-settings-daemon cosmic-store cosmic-term cosmic-workspaces xdg-desktop-portal-cosmic
 
 COPY usr /usr
 
