@@ -18,7 +18,7 @@ RUN ln -sf usr/lib/opt /opt
 
 COPY etc /etc
 
-RUN rpm-ostree override remove firefox firefox-langpacks ptyxis gnome-tour \
+RUN rpm-ostree override remove firefox firefox-langpacks ptyxis gnome-software gnome-software-rpm-ostree gnome-tour \
 gnome-classic-session gnome-shell-extension-apps-menu gnome-shell-extension-launch-new-instance \
 gnome-shell-extension-places-menu gnome-shell-extension-window-list gnome-shell-extension-background-logo
 
