@@ -37,10 +37,11 @@ jobs:
         run: |
           /usr/bin/git version
           /usr/bin/pwd
-          /usr/bin/echo now ls
+          cd ..
+          /usr/bin/rmdir turbo-spoon
+          /usr/bin/git clone https://github.com/nils2614/turbo-spoon.git
+          cd turbo-spoon
           /usr/bin/ls -A
-          /usr/bin/echo and up
-          /usr/bin/ls ..
         
       # Run script to generate tags
       - name: Generate tags
