@@ -32,7 +32,9 @@ jobs:
     steps:
       # Checkout push-to-registry action GitHub repository
       - name: Checkout Push to Registry action
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          repository: 'https://codeberg.org/nils2614/turbo-spoon.git'
         
       # Run script to generate tags
       - name: Generate tags
