@@ -35,13 +35,19 @@ jobs:
         id: checkout-git
         shell: bash
         run: |
+          /usr/bin/echo "Checking Git is installed..."
           /usr/bin/git version
+          /usr/bin/echo "Logging the current directory..."
           /usr/bin/pwd
-          cd ..
-          /usr/bin/rmdir turbo-spoon
-          /usr/bin/git clone https://github.com/nils2614/turbo-spoon.git
-          cd turbo-spoon
-          /usr/bin/ls -A
+          /usr/bin/echo "Adding repository directory to the temporary git global config as a safe directory"
+          /usr/bin/git config --global --add safe.directory /home/runner/work/turbo-spoon/turbo-spoon
+          /usr/bin/echo "Cloning repository from Codeberg..."
+          /usr/bin/git init -b main /home/runner/work/turbo-spoon/turbo-spoon
+          /usr/bin/git remote add origin https://codeberg.org/nils2614/turbo-spoon
+          /usr/bin/git config --local gc.auto 0
+          /usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin
+          /usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+          /usr/bin/git log -1 --format='%H'
         
       # Run script to generate tags
       - name: Generate tags
