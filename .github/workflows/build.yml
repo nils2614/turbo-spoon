@@ -31,10 +31,16 @@ jobs:
             is_latest: true
     steps:
       # Checkout push-to-registry action GitHub repository
-      - name: Checkout Push to Registry action
-        uses: actions/checkout@v4
-        with:
-          repository: 'https://codeberg.org/nils2614/turbo-spoon.git'
+      - name: Checkout Git Repository from Codeberg
+        id: generate-tags
+        shell: bash
+        run: |
+          /usr/bin/git version
+          /usr/bin/pwd
+          /usr/bin/echo now ls
+          /usr/bin/ls -A
+          /usr/bin/echo and up
+          /usr/bin/ls ..
         
       # Run script to generate tags
       - name: Generate tags
