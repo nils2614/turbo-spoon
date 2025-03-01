@@ -1,3 +1,0 @@
-docker:
-  ghcr.io/nils2614/turbo-spoon:
-    use-sigstore-attachments: true
